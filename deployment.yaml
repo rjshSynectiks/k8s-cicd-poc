@@ -1,0 +1,20 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-poc
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: k8s-poc
+  template:
+    metadata:
+      labels:
+        app: k8s-poc
+    spec:
+      containers:
+      - name: k8s-poc
+        image: k8s-poc:1.0
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5000

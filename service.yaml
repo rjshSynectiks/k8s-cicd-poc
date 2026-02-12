@@ -1,0 +1,11 @@
+﻿apiVersion: v1
+kind: Service
+metadata:
+  name: k8s-poc-service
+spec:
+  type: NodePort
+  selector:
+    app: k8s-poc
+  ports:
+  - port: 80
+    targetPort: 5000
