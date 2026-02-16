@@ -1,4 +1,4 @@
-﻿apiVersion: apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: k8s-poc
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: k8s-poc
-        image: k8s-poc:1.0
-        imagePullPolicy: Never
+        image: rjshsynectiks/k8s-poc:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 5000
